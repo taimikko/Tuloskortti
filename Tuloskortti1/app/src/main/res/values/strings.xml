@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Tuloskortti</string>
+    <string name="merkitsija">Merkitsijä</string>
+    <string name="kommentti">kommentti</string>
+    <string name="peru">PERU</string>
+    <string name="ok">OK</string>
+    <string name="peruKaikki">Peru</string>
+    <string name="tallenna">Tallenna</string>
+    <string name="nimi">Nimi:</string>
+    <string name="tasoitus">Tarkka tasoitus:</string>
+    <string name="paiva">Päivä:</string>
+    <string name="kentta">Kenttä:</string>
+    <string name="kentaSlope">Slope</string>
+    <string name="hcp">HCP</string>
+    <string name="kentanScr">CR</string>
+    <string name="tee">Tii:</string>
+    <string name="pelitasoitus">Pelitasoitus:</string>
+    <string name="omaSeura">Seura:</string>
+    <string name="jasennumero">Jäsennumero.</string>
+    <string name="valkoinen">Valkoinen</string>
+    <string name="keltainen">Keltainen</string>
+    <string name="sininen">Sininen</string>
+    <string name="punainen">Punainen</string>
+    <string name="tg">Tammer Golf</string>
+    <string name="tgg">Testi Golf</string>
+    <string name="par">Par</string>
+</resources>

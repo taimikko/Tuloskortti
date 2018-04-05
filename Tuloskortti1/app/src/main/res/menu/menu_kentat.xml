@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tg"
+        android:title="@string/tg"
+        />
+
+    <item
+        android:id="@+id/tgg"
+        android:title="@string/tgg"
+        />
+    <item
+        android:title="Lakeside Golf"
+        />
+    <item
+        android:title="LGV - Järvenranta"
+        />
+    <item
+        android:title="LGV - Pirunpelto"
+        />
+    <item
+        android:title="Pirkanmaan Golf"
+        />
+    <item
+        android:title="Golf Pirkkala"
+        />
+    <item
+        android:title="Nokia River Golf"
+        />
+    <item
+        android:title="NRG - Kartano"
+        />
+    <item
+        android:title="NRG - River"
+        />
+
+</menu>

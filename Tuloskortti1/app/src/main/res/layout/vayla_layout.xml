@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:id="@+id/vaylarivi"
+>
+    <!--android:onClick="vaylaClick"-->
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Väylä"
+        android:id="@+id/txtVayla"
+        android:textSize="18dp"
+        android:layout_alignParentEnd="false"
+        android:textAlignment="center"
+        android:ellipsize="middle" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Pituus"
+        android:id="@+id/txtPituus"
+        android:textSize="18dp"
+        android:layout_toRightOf="@+id/txtVayla"
+        android:textAlignment="textEnd"
+        android:ellipsize="middle" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="PAR"
+        android:id="@+id/txtPar"
+        android:textSize="18dp"
+        android:layout_toRightOf="@+id/txtPituus"
+        android:textAlignment="center"
+        android:ellipsize="middle" />
+
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="HCP"
+        android:id="@+id/txtHcp"
+        android:textSize="18dp"
+        android:layout_toRightOf="@+id/txtPisteet"
+        android:textAlignment="center"
+        android:ellipsize="middle" />
+
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="fill_parent"
+        android:text="Lyönnit"
+        android:id="@+id/edtLyonnit"
+        android:textSize="18dp"
+        android:layout_toEndOf="@+id/txtPar"
+        android:textAlignment="center"
+        android:autoText="false"
+        android:ellipsize="middle" />
+
+ <!--   <EditText
+        android:layout_width="60dp"
+        android:layout_height="fill_parent"
+        android:id="@+id/edtLyonnit"
+        android:layout_toEndOf="@+id/txtHcp"
+        android:background="#abc"
+        android:textAlignment="center"
+     />
+-->    <!--android:onClick="tulosClick"-->
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="PB 2"
+        android:id="@+id/txtPisteet"
+        android:textSize="18dp"
+        android:layout_toEndOf="@+id/edtLyonnit"
+        android:textAlignment="center"
+        android:ellipsize="middle" />
+
+</RelativeLayout>

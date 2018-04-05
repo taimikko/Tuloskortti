@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1"
+    android:textSize="20dp"
+    android:id="@+id/perustiedot"
+    android:onClick="onClickPiilotaNumeroPicker"
+    android:paddingLeft="5dp">
+
+
+    <TextView
+        android:id="@+id/txtNimi"
+        android:text="@string/nimi"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edtNimi"
+        android:textSize="18dp"
+        android:layout_marginLeft="2dp" />
+
+    <TextView
+        android:id="@+id/txtJasenNro"
+        android:text="@string/jasennumero"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNimi"
+        android:layout_alignBaseline="@+id/edtJasennumero"
+        android:visibility="gone"
+        android:textSize="18dp"
+        android:layout_marginLeft="3dp" />
+
+    <TextView
+        android:id="@+id/txtOmaSeura"
+        android:text="@string/omaSeura"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtJasenNro"
+        android:layout_alignBaseline="@+id/edtSeura"
+        android:visibility="gone"
+        android:textSize="18dp"
+        android:layout_marginLeft="3dp" />
+
+    <TextView
+        android:id="@+id/txtTasoitus"
+        android:text="@string/tasoitus"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtJasenNro"
+        android:layout_alignBaseline="@+id/edtTasoitus"
+        android:textSize="18dp"
+        android:layout_marginLeft="2dp" />
+
+    <TextView
+        android:id="@+id/txtPaiva"
+        android:text="@string/paiva"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTasoitus"
+        android:layout_alignBaseline="@+id/edtPaiva"
+        android:textSize="18dp"
+        android:layout_marginLeft="2dp" />
+
+    <TextView
+        android:id="@+id/txtKentta"
+        android:text="@string/kentta"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPaiva"
+        android:layout_alignBaseline="@+id/edtKentta"
+        android:textSize="18dp"
+        android:layout_marginLeft="2dp" />
+
+    <TextView
+        android:id="@+id/txtPar"
+        android:text="@string/par"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtKentta"
+        android:layout_alignBaseline="@+id/edtPar"
+        android:textSize="18dp"
+        android:layout_marginLeft="2dp" />
+
+    <TextView
+        android:id="@+id/txtVali3"
+        android:text="/"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtPar"
+        android:layout_toEndOf="@+id/txtPar"
+        android:textSize="18dp"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@+id/txtPar" />
+
+    <TextView
+        android:id="@+id/txtKentanCr"
+        android:text="@string/kentanScr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/txtVali3"
+        android:layout_alignBaseline="@+id/txtPar"
+        android:textSize="18dp"
+        android:layout_marginLeft="3dp"
+ />
+
+    <TextView
+        android:id="@+id/txtVali1"
+        android:text="/"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtPar"
+        android:layout_toEndOf="@+id/txtKentanCr"
+        android:textSize="18dp"
+        android:layout_marginLeft="3dp" />
+
+    <TextView
+        android:id="@+id/txtKentanSlope"
+        android:text="@string/kentaSlope"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/txtVali1"
+        android:textSize="18dp"
+        android:layout_marginLeft="3dp"
+        android:layout_alignBaseline="@+id/txtKentanCr" />
+
+    <TextView
+        android:id="@+id/txtTii"
+        android:text="@string/tee"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPar"
+        android:layout_alignBaseline="@+id/edtTii"
+        android:textSize="18dp"
+        android:layout_marginLeft="2dp" />
+
+    <TextView
+        android:id="@+id/txtPelitasoitus"
+        android:text="@string/pelitasoitus"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtTii"
+        android:layout_alignBaseline="@+id/edtPelitasoitus"
+        android:textSize="18dp"
+        android:layout_marginLeft="2dp" />
+
+    <TextView
+        android:id="@+id/edtNimi"
+        android:text="Pekka Pelaaja"
+        android:textSize="18dp"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/edtSeura"
+        android:layout_toEndOf="@id/txtNimi"
+        />
+
+    <TextView
+        android:id="@+id/edtJasennumero"
+        android:text="12345"
+        android:textSize="18dp"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/edtNimi"
+        android:layout_toEndOf="@+id/txtJasenNro"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/edtSeura"
+        android:text="TAKK:n pallonlyöjät"
+        android:textSize="18dp"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/edtJasennumero"
+        android:layout_toEndOf="@+id/txtOmaSeura"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/edtTasoitus"
+        android:text="12.3"
+        android:textSize="18dp"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/edtSeura"
+        android:layout_toEndOf="@id/txtTasoitus"
+        android:onClick="onTarkkaTasoitusClick"
+        android:background="#cfc" />
+
+
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:id="@+id/edtPaiva"
+        android:layout_below="@+id/edtTasoitus"
+        android:layout_toEndOf="@+id/txtPaiva"
+        android:text="1.4.2016"
+        android:textSize="18dp"
+        android:onClick="onClickAvaaKalenteri"
+        android:background="#cfc" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:id="@+id/edtKentta"
+        android:layout_below="@+id/edtPaiva"
+        android:layout_alignParentEnd="true"
+        android:text="Kentän nimi"
+        android:layout_toEndOf="@+id/txtKentta"
+        android:onClick="onKenttaClick"
+        android:textSize="18dp"
+        android:background="#cfc" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:id="@+id/edtPar"
+        android:layout_below="@+id/edtKentta"
+        android:text="72"
+        android:textSize="18dp"
+        android:layout_alignStart="@+id/edtTii"
+         />
+
+    <TextView
+        android:id="@+id/txtVali4"
+        android:text="/"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/edtKentta"
+        android:layout_toEndOf="@+id/edtPar"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:id="@+id/edtKentanCR"
+        android:text="71"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="false"
+        android:layout_toEndOf="@+id/txtVali4"
+        android:layout_alignBaseline="@+id/edtPar" />
+
+    <TextView
+        android:id="@+id/txtVali2"
+        android:text="/"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_toEndOf="@+id/edtKentanCR"
+        android:layout_alignBaseline="@+id/edtPar"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:id="@+id/edtKentanSlope"
+        android:text="132"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_toEndOf="@+id/txtVali2"
+        android:layout_alignBaseline="@+id/edtPar" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:id="@+id/edtTii"
+        android:layout_below="@+id/edtPar"
+        android:layout_alignParentEnd="false"
+        android:text="Keltainen"
+        android:layout_toEndOf="@+id/txtTii"
+        android:onClick="onTeeClick"
+        android:textSize="18dp"
+        android:background="#cfc" />
+
+    <TextView
+        android:id="@+id/edtPelitasoitus"
+        android:text="13"
+        android:textSize="18dp"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/edtTii"
+        android:layout_toEndOf="@id/txtPelitasoitus"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Business"
+        android:id="@+id/btnTempBack"
+        android:onClick="onBackToBusinessClick"
+
+        android:alpha="1"
+        android:visibility="gone"
+        android:layout_alignBottom="@+id/edtPelitasoitus"
+        android:layout_alignEnd="@+id/edtPelitasoitus" />
+
+    <NumberPicker
+        android:id="@+id/numberPicker"
+        android:layout_marginLeft="150dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:baselineAligned="true"
+        android:alpha="1"
+        android:background="#cfc"
+        android:orientation="horizontal"
+        android:scrollIndicators="left|right"
+        android:layout_alignEnd="@+id/edtNimi"
+        android:layout_alignBaseline="@+id/txtTasoitus" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="laske"
+        android:id="@+id/btnCheck"
+        android:onClick="onCheckClick"
+        android:layout_below="@+id/numberPicker"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible" />
+
+    <CalendarView
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:id="@+id/calendarView"
+        android:layout_toEndOf="@+id/txtNimi"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"
+        android:background="#cfc"
+        android:showWeekNumber="true"
+        android:layout_alignStart="@+id/txtKentanSlope"
+        android:nestedScrollingEnabled="true" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/radioTee"
+        android:layout_toEndOf="@+id/edtTii"
+        android:layout_alignTop="@+id/edtTii"
+        android:layout_marginLeft="5dp"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioValk"
+            android:background="#ffffff"
+            android:buttonTint="#000000" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioKelt"
+            android:background="#ffff00"
+            android:checked="true"
+            android:textColor="#000000"
+            android:foreground="#000000"
+            android:buttonTint="#000000" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioSini"
+            android:background="#0000ff"
+            android:buttonTint="#000000" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioPuna"
+            android:background="#fc0000"
+            android:buttonTint="#000000" />
+    </RadioGroup>
+
+
+</RelativeLayout>

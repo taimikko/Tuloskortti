@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/kokonaytto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+
+        android:layout_above="@+id/numeronappaimet">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rullattavaLayout"
+            >
+
+            <include
+                android:id="@+id/perustiedot"
+                layout="@layout/perustiedot"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <ListView
+                android:id="@+id/valylalista"
+                android:layout_width="wrap_content"
+                android:layout_height="620dp"
+                android:layout_below="@+id/perustiedot"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/loppuosa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentStart="false"
+                android:visibility="visible"
+                android:layout_below="@+id/valylalista"
+                android:onClick="onClickPiilotaNumerot">
+
+                <TextView
+                    android:id="@+id/txtMerkitsijä"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/merkitsija"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:textSize="18dp"
+                    android:textIsSelectable="true" />
+
+                <EditText
+                    android:id="@+id/edtMerkitsija"
+                    android:layout_below="@+id/txtMerkitsijä"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickPiilotaNumerot"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="#cfc"
+                    android:textSize="18dp"
+                    android:textIsSelectable="false" />
+
+                <TextView
+                    android:id="@+id/txtKommentti"
+                    android:layout_below="@+id/edtMerkitsija"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kommentti"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:textSize="18dp"
+                    android:textIsSelectable="true" />
+
+                <EditText
+                    android:id="@+id/edtKommentti"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtKommentti"
+                    android:inputType="textMultiLine"
+                    android:onClick="onClickPiilotaNumerot"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="#cfc"
+                    android:textSize="18dp"
+                    android:textIsSelectable="false" />
+
+                <TextView
+                    android:id="@+id/txtUusitasoitus"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/edtKommentti"
+                    android:text="vanha tasoitus x, tasoitusmuutos 0.1, uusi tasoitus y"
+                    android:visibility="invisible"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:textSize="18dp"
+                    android:textIsSelectable="true" />
+
+                <Button
+                    android:id="@+id/btnPeruKaikki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:onClick="onClickPeruKaikki"
+                    android:text="@string/peruKaikki"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/txtUusitasoitus"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/btnTallenna"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:onClick="onClickTallenna"
+                    android:text="@string/tallenna"
+                    android:layout_below="@+id/txtUusitasoitus"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/btnTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/btnTallenna"
+                    android:onClick="onTempClick"
+                    android:text="lue"
+                    android:visibility="visible"
+                    android:layout_below="@+id/txtUusitasoitus"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="18dp" />
+
+           </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/numeronappaimet"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_alignParentBottom="true"
+        android:background="#cfc"
+        android:transitionGroup="true"
+        android:visibility="visible">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:shrinkColumns="0,1,2,3">
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="18dp"
+                    android:ellipsize="middle" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textSize="18dp"
+                    android:ellipsize="middle" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textSize="18dp"
+                    android:ellipsize="middle" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:textSize="18dp"
+                    android:ellipsize="middle" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textSize="18dp"
+                    android:ellipsize="middle" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6"
+                    android:textSize="18dp"
+                    android:ellipsize="middle" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7"
+                    android:textSize="18dp"
+                    android:ellipsize="middle" />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8"
+                    android:textSize="18dp"
+                    android:ellipsize="middle" />
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9"
+                    android:textSize="18dp"
+                    android:ellipsize="middle" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btnPeru"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onPeruClick"
+                    android:text="@string/peru"
+                    android:textSize="18dp"
+                    android:ellipsize="middle" />
+
+                <Button
+                    android:id="@+id/button0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="18dp"
+                    android:ellipsize="middle" />
+
+                <Button
+                    android:id="@+id/buttonOK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onOkClick"
+                    android:text="@string/ok"
+                    android:textSize="18dp"
+                    android:ellipsize="middle" />
+
+
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/btnTilapainen1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:onClick="onTemp1Click"
+            android:text="t1"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnTilapainen2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:onClick="onTemp2Click"
+            android:text="t2"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
